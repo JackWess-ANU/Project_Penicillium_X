@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for i in {0..9};
+do
+mednum=med$[i+1]
+nice -n 15 ionice -c3 medaka_consensus -i basecalledtotal.fastq -d med$i/consensus.fasta -o $mednum -t 12 -m r941_min_high_g303;
+done
+
+echo 'Medaka has been run 10 times, may the force be with your assembly'

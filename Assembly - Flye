@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# This is a bash script used to call the assembler Flye
+
+# Ran a flye assembly for the 10kb12Q reads
+# --nano-raw was used as the reads were raw reads from Nanopore 
+# -g was set to 30m as the genome (g) was predicted to be around 30Mbp in size
+# -o denotes the name for the output folder
+# -t denotes the number of threads (computing power) assigned to the operation. 
+flye --nano-raw PenX10kb12Q -g 30m -o 10kb12Q -t 40
+
+# Then ran a flye assembly for the 10kb8Q reads, with the same parameters
+flye --nano-raw PenX10kb8Q -g 30m -o 10kb8Q -t 40
+

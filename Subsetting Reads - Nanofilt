@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#This is a bash script used to call NanoFilt 
+
+#Nanofilt is a package developed by wdecoster, for the subsetting of nanopore reads based on specific parameters supplied in the sequencing_summary.txt files. 
+# De Coster W, D'Hert S, Schultz DT, Cruts M & Van Broeckhoven C (2018) NanoPack: visualizing and processing long-read sequencing data. Bioinformatics 34, 2666-2669. doi:10.1093/
+# bioinformatics/bty149
+
+#Ran Nanofilt on total PenX raw nanopore reads (total_raw.fastq) using 4 settings to subset reads based on parameters of read-length and quality-score.
+
+#Nanofilt reads over 10kb and 12 Phred score
+cat ../Raw_data/total_raw.fastq | NanoFilt -l 10000 -q 12 -s ../Raw_data/sequencing_summary.txt > PenX_10kb_12Q.fastq
+
+#Nanofilt reads over 15kb and 10 Phred score
+cat ../Raw_data/total_raw.fastq | NanoFilt -l 15000 -q 10 -s ../Raw_data/sequencing_summary.txt > PenX_15kb_12Q.fastq
+
+#Nanofilt reads over 10kb and 15 Phred score
+cat ../Raw_data/total_raw.fastq | NanoFilt -l 10000 -q 15 -s ../Raw_data/sequencing_summary.txt > PenX_10kb_15Q.fastq
+
+#Nanofilt reads over 10kb and 8 Phred score
+cat ../Raw_data/total_raw.fastq | NanoFilt -l 10000 -q 8 -s ../Raw_data/sequencing_summary.txt > PenX_10kb_8Q.fastq

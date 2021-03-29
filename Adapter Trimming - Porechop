@@ -1,0 +1,17 @@
+#This is the code used to call Porechop on 4 read-sets out of Nanofilt. 
+
+#Porechop is a package developed by Ryan Wick, Jeremy Volkening & Nickloman, for use in trimming middle and end read adapters from Nanopore output 
+
+#Firstly, trimmed adapters from the 10kb12Q Nanofilt reads
+porechop -i PenX10kb12Q.fastq -o PenX10kb_12Q.fastq
+
+#Secondly, trimmed adapters from the more stringent 10kb15Q Nanofilt reads
+porechop -i PenX10kb15Q.fastq -o PenX10kb_15Q.fastq
+
+#Thirdly, trimmed adapters from the most stringent subset, 15kb12Q Nanofilt reads
+porechop -i PenX15kb12Q.fastq -o PenX15kb_12Q.fastq
+
+#Finally, trimmed adapters from the least stringent subset, 10kb8Q Nanofilt reads
+porechop -i PenX10kb8Q.fastq -o PenX10kb_8Q.fastq
+
+#After running porechop on the 4 subsets, I decided to process to generate assemblies for the 10kb12Q and 10kb8Q read subsets. 

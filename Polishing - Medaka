@@ -1,0 +1,30 @@
+# To call Medaka for polishing the genome assemblies, I use this short bash script:
+
+# Medaka is a software package designed to use long read nanopore data to polish nanopore assemblies, it is created by Oxford Nanopore Technologies. 
+
+# Firstly, one must create a folder for each assembly, e.g. 10kb12Q and 10kb8Q, then within each create a folder named specifically med0 then move the assembly into it and rename
+# the assembly consensus.fasta THIS IS INCREDIBLY IMPORTANT, as the medaka output is named consensus.fassta if the assembly is not named this then the forloop will fail to initiate
+# and the script will fail at step 1.
+
+# To use more or less iterations of medaka polishing, simply alter the 9 in '{0..9}' to whichever number it is you desire (remembering to minus 1 as code starts counting at zero!!!)
+
+
+# Initially, to run 10 iterations of Medaka polishing on the 10kb12Q assembly: 
+
+for i in {0..9};
+do
+mednum=med$[i+1]
+nice -n 15 ionice -c3 medaka_consensus -i ../../PenX_trimmed_total.fastq -d med$i/consensus.fasta -o $mednum -t 12 -m r941_min_high_g303;
+done
+
+# Then, to run 10 iterations of Medaka polishing on the 10kb12Q assembly:
+
+cd ../10kb8Q
+
+for i in {0..9};
+do
+mednum=med$[i+1]
+nice -n 15 ionice -c3 medaka_consensus -i ../../PenX_trimmed_total.fastq -d med$i/consensus.fasta -o $mednum -t 12 -m r941_min_high_g303;
+done
+
+# Polished assemblies will be written inside the med10 subfolder, as consensus.fasta. 

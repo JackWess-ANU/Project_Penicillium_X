@@ -1,0 +1,51 @@
+# This is a short script used to call the BUSCO program, to assess genome completeness. 
+
+# BUSCO is a software package designed to Benchmark (or identify) Universal Single Copy Ortholog genes in an assembly, with respect to the BUSCOs shared in the designated 
+# hierarchical group (e.g. genus, order). 
+
+# BUSCO is open-access software developed by Rob Waterhouse and associates and is available from github. 
+
+# -i denotes input, namely a genome assembly in a fasta or txt format. 
+# -l denotes lineage, meaning the hierachical section that one wishes to compare their assembly to, for PenicilliumX I chose the section eurotialesodb10 (odb10 denoting its nature 
+# as a database).
+# -o denotes output, meaning the name of the output folder as desired by the user. 
+# -m denotes mode, using genome sets the mode to genome as the input is a full genome assembly. 
+# -c denotes the thread count or computational power alloted to the process. 
+
+# Here is an example of the busco code I ran to find the BUSCO score for my assembly:
+
+busco -i 10kb8QCanu -l eurotialesdb10 -o 10kb8QCanu_busco_output -m genome -c 6
+
+# Busco output is delivered in the output folder, but can also be seen in the standard output, delivering:
+# No. of complete BUSCOs (and further broken down into complete and single-copy BUSCOs and complete and duplicated BUSCOs). 
+# No. of fragmented BUSCOs.
+# No. of missing BUSCOs.
+# No. of total BUSCO groups searched.
+# A percentage score of complete BUSCOs. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# BUSCO applications from quality assessments to gene prediction and phylogenomics. Robert M. Waterhouse, Mathieu Seppey, Felipe A. Simão, Mose Manni, Panagiotis Ioannidis, Guennadi Klioutchnikov, Evgenia V. Kriventseva, and Evgeny M. Zdobnov Molecular Biology & Evolution, Volume 35, Issue 3, 1 March 2018, Pages 543–548 (published online Dec 6, 2017) doi: 10.1093/molbev/msx319
+
+# BUSCO: assessing genome assembly and annotation completeness with single-copy orthologs. Felipe A. Simão, Robert M. Waterhouse, Panagiotis Ioannidis, Evgenia V. Kriventseva, and Evgeny M. Zdobnov Bioinformatics, Volume 31, Issue 19, 1 October 2015, Pages 3210–3212 (published online June 9, 2015) doi: 10.1093/bioinformatics/btv351
+
+# Using BUSCO to assess insect genomic resources. Robert M. Waterhouse, Mathieu Seppey, Felipe A. Simão, and Evgeny M. Zdobnov Methods in Molecular Biology, Insect Genomics, Humana Press, New York, NY 2019, Pages 59-74 (published online November 10, 2018) doi: 10.1007/978-1-4939-8775-7_6
+
+# Copyright (c) 2016-2019, Evgeny Zdobnov (ez@ezlab.org) Licensed under the MIT license.

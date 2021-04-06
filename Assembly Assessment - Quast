@@ -1,0 +1,18 @@
+# This is a very short script that can be customised to call Quast for genome statistics. 
+
+# Quast or Quality Assessment tool, is a software package developed by X and available on Github. It is used to provide general details on genomic assemblies in a fasta format. 
+# Quast is installed through the conda repository using conda install -c bioconda quast
+
+# To run quast:
+# requires an input in fasta or txt format (assembly.fasta)
+# -o denotes the designated output folder for quast analysis 
+
+quast assembly.fasta -o quast_output_myassembly
+
+# Quast output can be seen in the summary file report.txt within the designated output folder
+# Quast will provide data on:
+# The number and size of contigs in the assembly, including the largest contig. 
+# Total size of genome assembly. 
+# GC %
+# N50, N75, L50 and L75. 
+# Number of N (errors) per 100kbp. 

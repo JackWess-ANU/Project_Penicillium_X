@@ -1,0 +1,15 @@
+# This is a very short script showing how to use the python script FindTelomeres on a genome assembly.
+# FindTelomeres is a python script created by Jana Sperschneider and available to download from Github. 
+# FindTelomeres works by identifying regions of telomeric repeats in the assembly (both forward and reverse).
+
+# Firstly, the FindTelomeres script must be downloaded from Github using:
+wget https://github.com/JanaSperschneider/FindTelomeres/blob/master/FindTelomeres.py
+
+
+# To then run the script one must use:
+
+python FindTelomeres.py assembly.fasta
+
+# Output will only be shown in the standard output and must therefore be screenshotted or recorded in an electronic notebook. 
+# Output will include forward and reverse identified telomeric repeat regions for each contig in which they are present. 
+# If a chromosome-level assembly is present one would expect each contig to have both a forward and reverse telomere found. 

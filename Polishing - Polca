@@ -1,0 +1,19 @@
+# To call Polca for polishing genome assemblies, I use this short bash script:
+
+# Polca is a software package designed to use short read Illumina data to polish nanopore assemblies, it is created by XXX
+
+# Firstly, one must create a folder for each assembly, e.g. 10kb12Q and 10kb8Q
+# The input (assembly) can be called consensus.fasta for ease of use as this is the name of Medaka output. 
+# This script will only run 1 round of polca polishing, to run again will take some maneouvering, including perhaps renaming the 1st polca output. 
+
+# Then from inside the 10kb12Q folder:
+
+polca.sh -a consensus.fasta -r '../../PenX_R1_combined.fastq ../../PenX_R2_combined.fastq' -t 60
+
+##Change directory to 10kb8Q for its run of polca polishing.
+
+cd ../10kb8Q
+
+## Secondly, run a polca polish on the assembly for 10kb8Q.
+
+polca.sh -a consensus.fasta -r '../../PenX_R1_combined.fastq ../../PenX_R2_combined.fastq' -t 60

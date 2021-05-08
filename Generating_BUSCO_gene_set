@@ -1,0 +1,44 @@
+## Short bash script that when run generates busco gene sets for 21 Penicillium species presumed to be closely related to Penicillium X. 
+
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.arizonense/P.arizonense.fasta -l eurotiales_odb10 -o P.arizonense_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.antarcticum/P.antarcticum.fasta -l eurotiales_odb10 -o P.antarcticum_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.brasilianum/P.brasilianum.fasta -l eurotiales_odb10 -o P.brasilianum_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.chrysogenum/P.chrysogenum.fasta -l eurotiales_odb10 -o P.chrysogenum_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.coprophilum/P.coprophilum.fasta -l eurotiales_odb10 -o P.coprophilum_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.crustosum/P.crustosum.fasta -l eurotiales_odb10 -o P.crustosum_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.decumbens/P.decumbens.fasta -l eurotiales_odb10 -o P.decumbens_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.digitatum/P.digitatum.fasta -l eurotiales_odb10 -o P.digitatum_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.expansum/P.expansum.fasta -l eurotiales_odb10 -o P.expansum_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.flavigenum/P.flavigenum.fasta -l eurotiales_odb10 -o P.flavigenum_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.freii/P.freii.fasta -l eurotiales_odb10 -o P.freii_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.griseoroseum/P.griseoroseum.fasta -l eurotiales_odb10 -o P.griseoroseum_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.nalgiovense/P.nalgiovense.fasta -l eurotiales_odb10 -o P.nalgiovense_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.nordicum/P.nordicum.fasta -l eurotiales_odb10 -o P.nordicum_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.rolfsii/P.rolfsii.fasta -l eurotiales_odb10 -o P.rolfsii_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.roqueforti/P.roqueforti.fasta -l eurotiales_odb10 -o P.roqueforti_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.rubens/P.rubens.fasta -l eurotiales_odb10 -o P.rubens_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.solitum/P.solitum.fasta -l eurotiales_odb10 -o P.solitum_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.steckii/P.steckii.fasta -l eurotiales_odb10 -o P.steckii_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.subrubescens/P.subrubescens.fasta -l eurotiales_odb10 -o P.subrubescens_busco_list -m genome -c 6
+
+nice -n 15 ionice -c3 busco -i ../ncbi_dataset/data/P.vulpinum/P.vulpinum.fasta -l eurotiales_odb10 -o P.vulpinum_busco_list -m genome -c 6
